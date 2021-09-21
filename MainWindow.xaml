@@ -1,0 +1,24 @@
+﻿<Window x:Class="ONEBatch.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ONEBatch"
+        mc:Ignorable="d"
+        Title="Shadow .ONE Batch Replace v1.0" Height="235" Width="260" ResizeMode="NoResize" Background="#FF2E2E2E" WindowStyle="SingleBorderWindow">
+    <Grid Background="#FF232323">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10,10,10,0" Grid.ColumnSpan="2">
+            <Button x:Name="selectONEButton" Margin="5,0,10,0" Content="Select .ONE To Target" Click="selectONEButton_Click" Foreground="White" Background="#FF373737"/>
+            <TextBlock x:Name="targetFileStatusLabel" Margin="5,5,10,5" Text="Target: Not Picked" Foreground="White" TextTrimming="CharacterEllipsis" />
+            <Button x:Name="selectReplacementButton" Margin="5,0,10,0" Content="Select Replacement File" Click="selectReplacementButton_Click" Foreground="White" Background="#FF373737"/>
+            <TextBlock x:Name="replacementFileStatusLabel" Margin="5,5,10,5" Text="Replacement: Not Picked" TextTrimming="CharacterEllipsis" Foreground="White"/>
+            <Label x:Name="replacementHintLabel" Content="Extension to replace (Ex: .CCL): " Foreground="White"/>
+            <TextBox x:Name="extensionTextBox" Padding="0,5,0,5" TextAlignment="Center" Margin="5,0,10,10" Background="#FF626262" Foreground="White"/>
+            <Button x:Name="batchReplaceButton" Margin="5,0,10,0" Content="Execute Batch Replace" Click="batchReplaceButton_Click" Foreground="White" Background="#FF373737"/>
+        </StackPanel>
+    </Grid>
+</Window>
